@@ -1,1 +1,1 @@
-# ScalaProject
+# Shopaholic 
