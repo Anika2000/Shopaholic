@@ -1,11 +1,12 @@
 # Shopaholic 
 ## Navigating the file system: 
-   - :open_file_folder: **app** : root folder for game app
-      -  :open_file_folder: **static/game** : Contains static files like image files, css files and JS files
+   - :open_file_folder: **app**
+      -  :open_file_folder: **controllers** : Contains static files like image files, css files and JS files
            -   :open_file_folder: **index.js** : contains javascript code for the django project 
            -   :open_file_folder: **inherit.css** : CSS style file for the django project 
            -   :open_file_folder: **register.css** : CSS style file for the django project 
            -   There are also image files present here that is loaded in my html files when required. 
+       -  :open_file_folder: **views** : Contains static files like image files, css files and JS files
    - :open_file_folder: **conf** : root folder for game app
      
       
