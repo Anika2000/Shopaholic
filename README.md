@@ -1,5 +1,5 @@
 # Shopaholic 
-## Navigating the file system: 
+## Navigating the file system for code: 
    - :open_file_folder: **app**
       -  :open_file_folder: **controllers** 
            -   :open_file_folder: **HomeController.Scala**
