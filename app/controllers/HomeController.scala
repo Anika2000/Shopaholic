@@ -24,4 +24,7 @@ class HomeController @Inject()(val controllerComponents: ControllerComponents) e
   def ping() : Action[AnyContent] = Action { implicit request =>
     Ok("String works!")
   }
+  def product(itemName: String, itemID:Int) = Action {
+    Ok(s"The item is: $itemName and the ID is: $itemID")
+  }
 }
