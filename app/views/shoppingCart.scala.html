@@ -1,0 +1,10 @@
+@(items: Seq[String])
+
+@main("Shopping Cart") {
+    <h2>Shopping Cart</h2>
+    <ul>
+        @for(item <- items){
+            <li>@item</li>
+        }
+    </ul>
+}
