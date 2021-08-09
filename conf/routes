@@ -5,11 +5,17 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index()
-GET     /ping                       controllers.HomeController.ping()
-GET     /cart                       controllers.Shopaholic1.shoppingCart()
-GET     /item/:itemName/:itemID     controllers.HomeController.product(itemName, itemID: Int)
-GET     /login                      controllers.Shopaholic1.login()
-+nocsrf
-POST    /validateLogin              controllers.Shopaholic1.validateLogin()
+GET     /home                      controllers.HomeController.home
+#GET     /listings             controllers.S
+GET     /shoppingCart               controllers.Shopaholic.shoppingCart()
+#+nocsrf
+POST    /validateLogin              controllers.HomeController.login
+#+nocsrf
+POST    /createUsers                controllers.HomeController.createUser
+GET     /logout                     controllers.Shopaholic.logout
+POST    /addListing                 controllers.Shopaholic.addListing()
+POST    /addItem                    controllers.Shopaholic.addItem
+POST    /deleteItem                 controllers.Shopaholic.deleteItem
+GET     /out                        controllers.HomeController.checkout
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
