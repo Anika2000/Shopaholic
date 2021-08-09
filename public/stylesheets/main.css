@@ -1,0 +1,42 @@
+body{
+background-color: lightskyblue;
+}
+
+h1{
+    text-align: center;
+}
+
+#main-page-login, #main-page-create{
+    display: flex;
+    justify-content: center;
+    border: 2px mediumseagreen solid;
+    background-color: skyblue;
+    padding: 40px;
+    margin:40px;
+}
+
+
+#nav-bar-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: plum;
+}
+
+.nav-bar-list {
+    float: left;
+}
+
+.nav-bar-a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.nav-bar-a:hover {
+    background-color: hotpink;
+}
