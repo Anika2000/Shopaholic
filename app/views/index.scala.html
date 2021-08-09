@@ -1,5 +1,36 @@
-@()
+@()(implicit request: RequestHeader)
 
 @main("Shopaholic") {
   <h1>Welcome to Shopaholic!</h1>
+  <div id="main-page-login">
+    <form method="post" action="@routes.HomeController.login">
+      @helper.CSRF.formField
+      <div id="main-page-input">
+        <input style="padding:10px; margin:10px;" type="text" name="username" placeholder="username">
+      </div>
+      <div id="main-page-password">
+        <input style=" padding:10px; margin:10px;" type="password" name="password" placeholder="password">
+      </div>
+      <div style="left:50px; position: relative" id="main-page-submit">
+        <input style="padding:10px; font-weight:bold; background-color: mediumseagreen; margin:10px; " type="Submit" value="Login">
+      </div>
+    </form>
+  </div>
+
+  <div style="background-color: plum; border:2px hotpink solid" id="main-page-create">
+    <form method="post" action="createUsers">
+      @helper.CSRF.formField
+      <div id="main-page-input-create">
+        <input style="padding:10px; margin:10px;" type="text" name="username" placeholder="username">
+      </div>
+      <div id="main-page-password-create">
+        <input style=" padding:10px; margin:10px;" type="password" name="password" placeholder="password">
+      </div>
+      <div style="left:50px; position: relative" id="main-page-submit-create">
+        <input style="padding:10px; font-weight:bold; background-color: pink; margin:10px; " type="Submit" value="Create User">
+      </div>
+    </form>
+  </div>
+
+
 }

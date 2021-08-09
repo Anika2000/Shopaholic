@@ -1,0 +1,30 @@
+@import scala.collection.mutable.ListBuffer
+@(everylistings: ListBuffer[String])(implicit request:RequestHeader)
+
+@main("Listings"){
+    <ul id="nav-bar-ul">
+        <li class="nav-bar-list"><a class="nav-bar-a" href="shoppingCart">Shopping Cart</a></li>
+        <li class="nav-bar-list"><a class="nav-bar-a" href="out">Check Out</a></li>
+        <li class="nav-bar-list"><a class="nav-bar-a" href="logout">Log Out</a></li>
+    </ul>
+    <ul>
+        @for(listing <- everylistings){
+            <div style="border: 1px hotpink solid; padding: 20px; width:30%;">@listing
+                <form method="post" action="addItem">
+                    @helper.CSRF.formField
+                    <input type="hidden" name="add-to-cart" value="@listing">
+                    <input style="background-color: plum" type="submit" value="Add To Shopping Cart">
+                </form>
+            </div>
+        }
+    </ul>
+
+    <div style="margin:40px; border:2px mediumseagreen solid; width:32%; background-color: skyblue;">
+        <form method="post" action="addListing">
+            @helper.CSRF.formField
+            <input name="new-item" style="width:190px; height: 100px;" type="text" name="new-item" placeholder="Input Item">
+            <input style="background-color: mediumseagreen;" type="submit" value="Add Listing">
+        </form>
+    </div>
+
+}

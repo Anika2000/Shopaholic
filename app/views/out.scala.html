@@ -1,0 +1,19 @@
+@(allshoppingitems: Seq[String])(implicit request:RequestHeader)
+
+@main("Check Out"){
+    <ul id="nav-bar-ul">
+        <li class="nav-bar-list"><a class="nav-bar-a" href="shoppingCart">Shopping Cart</a></li>
+        <li class="nav-bar-list"><a class="nav-bar-a" href="home">Home</a></li>
+        <li class="nav-bar-list"><a class="nav-bar-a" href="logout">Log Out</a></li>
+    </ul>
+    <h2>Check Out: </h2>
+    <div style="border: 1px hotpink solid; padding: 20px; width:30%;">
+        <ul>
+            @for(item <- allshoppingitems){
+                <li style="list-style-type: none;">@item</li>
+            }
+        </ul>
+        <hr>
+        <h5>Total Price: </h5>
+    </div>
+}
